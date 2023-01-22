@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "sell.do",
-    "slug": "sell.do",
+    "name": "bookish",
+    "slug": "bookish",
+    "privacy":"private",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
