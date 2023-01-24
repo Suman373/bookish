@@ -79,14 +79,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#000',
         textAlign:'center',
-        marginVertical: 7
+        marginVertical: 10
     },
     inputWrapper: {
-        flex:1/2,
         marginHorizontal:'auto',
         width: '80%',
         paddingHorizontal: 10,
-        // backgroundColor:'rgba(0,0,0,0.2)'
     },
     textField:{
         width:'100%',
