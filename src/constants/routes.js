@@ -1,4 +1,4 @@
-export default {
+const ROUTES = {
     LOGIN:'Login',
     REGISTER: 'Register',
     FORGOT_PASSWORD:'Forgot Password',
@@ -22,3 +22,5 @@ export default {
     SETTINGS_DETAIL: "Settings Detail",
     PROFILE: 'My Profile'
 }
+
+export default ROUTES;

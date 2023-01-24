@@ -1,23 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+// import { StatusBar } from 'expo-status-bar';
 import {NavigationContainer} from '@react-navigation/native';
-import { StyleSheet, Text, View } from 'react-native';
+import AuthNavigator from './src/navigations/AuthNavigator';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-      <Text> BOOKISH</Text>
-      <StatusBar style="auto" />
-    </View>
+      <AuthNavigator/>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
