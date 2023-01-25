@@ -7,7 +7,8 @@ const Login = ({navigation}) => {
 
     const handleLogin = ()=>{
         // authenticate user
-        // navigation.navigate(ROUTES.HOME);
+        console.log(ROUTES.HOME);
+        navigation.navigate(ROUTES.HOME);
     }
 
     return (
