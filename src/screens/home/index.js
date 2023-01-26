@@ -1,5 +1,6 @@
-import Home from './Home';
-
 export default{
-    Home,
+    Home:require('./Home').default,
+    Favourites: require('./Favourites').default,
+    Profile: require('./Profile').default,
+    Settings: require('./Settings').default,
 }

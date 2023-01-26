@@ -1,41 +1,56 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ROUTES from '../constants/routes';
-import home from '../screens/home/index';
+import screens from '../screens/home/index';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
-    console.log(home);
 
     return (
         <Tab.Navigator
-        screenOptions={
-           ({route})=> ({
-            headerShown:false,
-            tabBarIcon: ({color,size,focused})=>{
-                let iconName;
-                switch(route.name){
-                    case ROUTES.HOME_TAB:
-                       iconName =  focused ? 'home' : 'home-outline';
-                    case ROUTES.SETTINGS:
-                       iconName =  focused ? 'settings' : 'settings-outline';
-                    case ROUTES.NOTIFICATION:
-                       iconName =  focused ? 'notifications' : 'notifications-outline';
-                    default :
-                        // iconName = focused ? 'box' : 'box';
-                }
-
-
-                return <>
-                <Icon name={iconName} size={22} color={color}/>
-                </>
-            }
-           })
-        }>
-            <Tab.Screen name={ROUTES.HOME_TAB} component={home.Home} />
-            <Tab.Screen name={ROUTES.SETTINGS} component={home.Settings} />
+            screenOptions={
+                ({ route }) => ({
+                    headerShown: false,
+                    tabBarStyle:{
+                        backgroundColor:'gold',
+                        height:52
+                    },
+                    tabBarActiveTintColor:'#000',
+                    tabBarLabelStyle:{
+                        fontSize:13,
+                    },
+                    tabBarIcon: ({ color, size, focused }) => {
+                        let iconName;
+                        size = focused ? 28 : 25;
+                        switch (route.name) {
+                            case ROUTES.HOME_TAB:
+                                iconName = focused ? 'home' : 'home-outline';
+                                break;
+                            case ROUTES.FAVOURITES:
+                                iconName = focused ? 'heart' : 'heart-outline';
+                                break;
+                            case ROUTES.PROFILE:
+                                iconName = focused ? 'person' : 'person-outline';
+                                break;
+                            case ROUTES.SETTINGS:
+                                iconName = focused ? 'settings' : 'settings-outline';
+                                break;
+                            default:
+                                iconName = focused ? 'alert-circle' : 'alert-circle-outline';
+                                break;
+                        }
+                        return <>
+                            <Icon name={iconName} size={size} color={color} />
+                        </>
+                    }
+                })
+            }>
+            <Tab.Screen name={ROUTES.HOME_TAB} component={screens.Home} />
+            <Tab.Screen name={ROUTES.FAVOURITES} component={screens.Favourites} />
+            <Tab.Screen name={ROUTES.PROFILE} component={screens.Profile} />
+            <Tab.Screen name={ROUTES.SETTINGS} component={screens.Settings} />
         </Tab.Navigator>
     )
 }

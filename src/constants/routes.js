@@ -8,12 +8,8 @@ const ROUTES = {
     HOME_TAB: 'Home Tab',
     HOME_DRAWER: 'Home Drawer',
 
-
-    WALLET:'Wallet',
-    WALLET_DRAWER: 'Wallet Drawer',
-
-    NOTIFICATION: "Notifications",
-    NOTIFICATIONS_DRAWER: 'Notification Drawer',
+    FAVOURITES: "Favourites",
+    FAVOURITES_DRAWER: 'Favourites Drawer',
 
     SETTINGS: 'Settings',
     ACCOUNT_SETTINGS:'Account Settings',
