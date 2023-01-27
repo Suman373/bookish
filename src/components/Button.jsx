@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 32,
         borderRadius: 8,
         elevation: 3,
-        backgroundColor: 'black',
+        backgroundColor: 'brown',
         marginVertical:10
     },
     text: {
