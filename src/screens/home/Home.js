@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { TextInput } from 'react-native-gesture-handler';
+import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const Home = () => {
@@ -14,6 +14,17 @@ const Home = () => {
         style={styles.searchIcon} 
         size={25} 
         name='search1'/>
+      </View>
+      <View style={styles.categoryOptions}>
+          {/* category custom buttons */}
+      </View>
+      <View style={styles.trendingBooksWrapper}>
+        <Text>
+          Trending books
+        </Text>
+        <ScrollView>
+          {/* Contains the books from trending api , trending books-> separate component*/}
+        </ScrollView>
       </View>
     </View>
   )
@@ -50,5 +61,14 @@ const styles = StyleSheet.create({
       marginLeft:4,
       padding:2,
       color:'grey'
+    },
+    categoryOptions:{
+      height:35,
+      width:'auto',
+      paddingVertical:8,
+      paddingHorizontal:10,
+      backgroundColor:'#efefef',
+      justifyContent:'center',
+      gap:8
     }
 })
